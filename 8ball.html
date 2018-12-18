@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<head>
+  <title>Magic 8 Ball</title>
+  <link rel="stylesheet" href="8ball.css">
+</head>
+
+<body>
+<img src="8ball.png"/>
+<h1>Magic 8 Ball</h1>
+<p>Ask me anything</p>
+<input id="userinput" type="input"/>
+<input id="button" type="button" value="Submit" onclick="response();"/>
+
+<p id="response"></p>
+  <script>
+  function response(){
+    var list = [
+      "Yes, Definitley",
+      "No, You are kidding!",
+      "Not able to determine",
+      "Invalid",
+      "Never!",
+      "Sure, maybe...",
+      "You gotta be kidding!",
+    ];
+    var number = Math.floor(Math.random()*7)
+  document.getElementById("response").innerHTML = list[number];
+  }
+</script>
+</body>
+</html>
